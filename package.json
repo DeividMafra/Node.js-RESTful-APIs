@@ -1,0 +1,42 @@
+{
+  "name": "nodejsbackend",
+  "version": "1.0.0",
+  "description": "RESTful APIs with Node.js, Express, Mongodb, and ES6 JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeividMafra/Node.js-RESTful-APIs.git"
+  },
+  "keywords": [
+    "#Node.js",
+    "#RESTful",
+    "#API",
+    "#Mongodb",
+    "#Express",
+    "#ES6",
+    "#JavaScript",
+    "#Back-end"
+  ],
+  "author": "Deivid Mafra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeividMafra/Node.js-RESTful-APIs/issues"
+  },
+  "homepage": "https://github.com/DeividMafra/Node.js-RESTful-APIs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.2",
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
