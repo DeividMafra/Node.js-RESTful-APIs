@@ -1,8 +1,13 @@
 import express from 'express';
 import routes from './src/routes/crmRoutes';
+import mongoose, { mongo } from 'mongoose';
+import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = 4000;
+
+
+
 
 routes(app);
 
