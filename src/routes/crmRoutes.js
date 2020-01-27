@@ -1,23 +1,30 @@
+import { addNewContact, getListContact, getOneContact, updateContact, removeContact } from '../controllers/crmControllers'
+
 const routes = (app) => {
-    app.route('/contact')
+    app.route('/getListContact')
         .get((req, res, next) => {
             // middleware
             console.log(`Resquet from: ${req.originalUrl}`)
             console.log(`Resquet type: ${req.method}`)
             next();
-        }, (req, res, next) => {
-            res.send('GET resquest successful!')
-        })
+        }, getListContact)
 
-        .post((req, res) =>
-            res.send('POST resquest successful!'))
+    app.route('/getContact/:contactID')
+        .get((req, res, next) => {
+            // middleware
+            console.log(`Resquet from: ${req.originalUrl}`)
+            console.log(`Resquet type: ${req.method}`)
+            next();
+        }, getOneContact)
 
-    app.route('/contact/:contactID')
-        .put((req, res) =>
-            res.send('PUT resquest successful!'))
+    app.route('/setContact')
+        .post(addNewContact);
 
-        .delete((req, res) =>
-            res.send('DELETE resquest successful!'))
+    app.route('/updContact/:contactID')
+        .put(updateContact)
+
+    app.route('/delContact/:contactID')
+        .delete(removeContact)
 }
 
 export default routes;
